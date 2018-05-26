@@ -2,67 +2,515 @@
 <html lang="en">
 
 <head>
-    <title>DevOps Blog</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DevOps Blog</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>TTS SATX DevOps Blog</h1>
-        <h2>You'll need lots of coffee.</h2>
-    </header>
-    <div id="info">
-        <p><a href="https://www.techtalentsouth.com/">Tech Talent South</a> is a tech boot camp working out of <a href="https://venturexsa.spaces.nexudus.com/en">VentureX</a> coworking space in San Antonio. We have classes in <a href="https://www.techtalentsouth.com/courses/devops-and-continuous-integration/">DevOps</a>, Ruby on Rails, and <a href="https://www.techtalentsouth.com/courses/javascript-application-development/">JavaScript</a>. If you want to learn to code in Saytown, this is the place!</p>
-    </div>
-    <div id="content">
-        <h3 class="blogPostTitle">Thursday, May 3rd, 2018</h3>
-	        <p>In the morning today, we studied Linux. Our main topic was the Filesystem Hierarchy Standard. We looked at numerous directories in the Linux system, such as the bin, boot, etc, mnt, media, proc, var, srv directories. Then we learned how to do symbolic links. At that point we broke for lunch.</p>
-	        <p>After lunch team from Webhead came to visit Tech Talent South. The DevOps class was in attendance at their talk.</p>
-	        <img src="images/webhead_talk-250pxw.jpg" alt="dev team from webhead talks to the DevOps class">
-	        <p>After the talk, the DevOps class gathered together in the classroom and continued our study of html and css. We created this blog.</p>
-	        <img src="images/IMG_1689-200.gif" alt="picture of the DevOps class, May 3rd 2018">
-        <h3 class="blogPostTitle">Friday, May 4th, 2018</h3>
-	        <p>We have been having consistent problems with installing Linux virtual machines in Virtual Box for Windows 10. The problem is that Virtual Box for Windows 10 does not seem to allow 64-bit versions of Linux to be installed; but 64-bit versions are all that are available at this point.</p>
-	        <p>On a Mac, when we install Virtual Box, we then download, say, an Ubuntu disk image. We click on "New" on the Virtual Box menu, and we are taken through an install sequence. At the end, we see the VM we created, with a legend such as "powered off."</p>
-	        <img src="images/VbScreenShot1.jpg" alt="Screen shot of Virtual Box">
-	        <p> When we double-click on the machine for the first time, it takes us to another interactive menu, where we have a drop-down list of machine types we can choose from. By default, in Windows 10, no 64-bit options are available, whereas by default in Mac OSX, many 64-bit options are available. We want to make it so that the Windows systems have the same options as the Mac systems.</p>
-	        <img src="images/VbScreenShot2-800.jpg" alt="Screen shot of Virtual Box options for Linux system installs">
-	        <p>The issue has been arising in HP machines. On a Microsoft Surface machine we did not experience the same problem.</p>
-	        <p>The first step towards resolving the problem on HP machines with Windows 10, was booting to BIOS. On HP machines, this is accomplished by restarting the machine, then repeatedly jabbing F9 until you see some text saying that it is going to enter BIOS mode. It may have another name for that, like Setup Utility. When you do boot to BIOS, it will look like this (except the instructor and student reflections will be different).</p>
-	        <img src="images/IMG_1690-800.jpg" alt="Screen shot of booting to BIOS on an HP machine">
-	        <p>Notice the menu across the top, with the options Main, Security, System Configuration, and Exit. You move between these with the direction arrows. Go right with the direction arrows until you are in System Configuration. Notice the Virtualization Technology is disabled by default</p>
-	        <img src="images/IMG_1693-800.jpg" alt="The system configuration screen in HP BIOS">
-	        <p>You should see a menu across the bottom indicating what keys to use. The current HP BIOS has F5 or F6 to change setting, so use F5 or F6 to change Virtualization Technology to Enabled.</p>
-	        <img src="images/IMG_1694-800.jpg" alt="The system configuration screen in HP BIOS with the Virtualization Technology enabled" class="separate">
-	        <img src="images/IMG_1695-800.jpg" alt="The system configuration instructions in HP BIOS">
-	        <p>Use F10 to save and exit. The computer will restart, and you will now have the 64-bit options in Virtual Box.</p>
-	        <img src="images/IMG_1696-800.jpg" alt="The system configuration instructions in HP BIOS">
-        <h3 class="blogPostTitle">Tuesday, May 22nd, 2018</h3>
-        <h3>Our journeys to DevOps/Continuous Integration</h3>
-	        <h4>Ryan Wahid</h4>
-	        <p>Week four of my journey to learn DevOps/Continuous Integration. It is natural progression from my recent Software QA career as the organizational demand for deployment frequency increases. DevOps is more than IT buzzword; it is organizations taking advantage of faster application delivery, more stable operating environments, and performance-focused employee teams.</p>
-	        <p>I stumbled Tech Talent South while looking for a class around San Antonio who teaches Docker, Jenkins, Ansible, Vagrant etc. While there are many IT training schools options but they are mostly focused on coding and not on infrastructure side. While I was only interested in CI/CD, I can certainly appreciate TTS’s effort to incorporate Ruby on Rails into this program.</p>
-	        <p>As the week progresses we’re diving deep into collaborative development using the Feature Branch Workflow in Git and GitHub. I learned to check out a feature branch using git checkout -b, then to work in the feature branch. Then I did git checkout master and git merge to merge the feature branch into the master branch. There is a long way to go. In the upcoming weeks there will be a lot of work for me to do. I am looking forward to the non-stop eight hours of class.</p>
-	   		<h4>Avery Smith</h4>
-		   		<p>My name is Avery Smith, I am a UTSA satistics major with a minor in actuarail science. Even though a STEM degree is a great degree to have, I've realized as Im aproaching the end of my college career that I am not completly satisfied. I asked my self what do I really want to do with the rest of my life, and I can finally say computer coding is the answer. I have always had an interest in computer coding but did nothing about it till I got so far into my STATS degree, changing it to computer science discouraged me. I was determined to figure something out if it was possible to get a quality education in computer coding outside of college and thats when I discovered tech talent south.</p>
-					<p>Tech Talent South is an amazing coding school. It's a very hands on project based learning school witch is great, Im creating full scale web applications from the ground up. Im taking the devops course learning linux, ruby on rails, html, css, java, git hub, docker, and much more while also learning how each program is essential for the other. DevOps is a software engineering culture and practice that aims at unifying software development and software operation. Because of this new practice I am able to cut development and operations time in half and continuosly deploy apps to keep companys apps up to date with the lastest products in thier respective fields.</p>
-					<p>It makes me happy that not only do I now get to have a career that won't bore me to death, I also get to give back to my family. My family owns a small buisness called Nogalitos Gear Companey, they bought it in the year 2001 and have done a tramendous job. they are currently the number one buisness against thier competitors, have doubled in size, and are now ready for a full ecomerce website. Having a full ecomerce website custom built is very expensive. Now i have the skills necesarry to build the ecomerce website of thier dreams for free and I couldn't be happier doing it.</p>
-			<h4>Joshua Davidson</h4>
-        <p>BLAH BLAH, Ruby, SQL, HTML, BLAH BLAH, Jenkins, BLAH, GitHub, Rails, B BLAH BLAH, I love it all! As a closet computer lover I never stepped into the spotlight of computing besides an intro to programming course and a tutor role for CS students in discrete math and analysis of algorithms. ENTER TECH TALENT SOUTH (TTS). The DevOps program at TTS starts an adventure into front end to back end programming with a DevOps approach along the way (using Command Lines as a trusty sidekick).
-        </p>
-        <p>I am astonished at the eloquent confluence of programming tools and languages. This is only week 4 and I'm already working on a Ubuntu virtual machine, developing a website via MDBootstrap, utlizing GitHub to collaborate on the project, and implementing Rails commands with a PostgreSQL database while modifying the embedded Ruby code to accomplish unique tasks. Personal I find this to be a near ZERO to HERO transformation (and there are 8 weeks to go!)
-        </p>
-        <h4>Leslie Henley</h4>
-        <p>After buying a new laptop, I enrolled myself in Tech Talent South's course on DevOps. Some of the material we've covered so far has included HTML and CSS coding. Additionally, we've covered other topics such as git/github, Ruby on rails and Linux coding skills. Previosly, the only computer programming experience I've had has been in Java at the University of Texas at San Antonio. I took Intro to Computer programming, however, I ddin't get credit for the class. Luckily, the other students haven't progresses without me and made it a point to help whoever falls behind so we progress as a team. We drink as much coffee as we can at Venture X in order to spend most of the day coding.
-		    </p>
-		    <p>
-				The material we're currently covering includes pushing to github, merging, pull requests and some Linux coding. Material design bootstrap also helped us in learning how to professionally design the layout of a website in very efficient ways. We began a personal website a long time agog which we all have to work on independently. Though my website has very little actual content, and does not have a host or domain name it's still good. 
-		    </p>
-	</div>
-	<footer>
-		<p>&copy; TTS SATX DevOps Class</p>
-	</footer>
 
+<body>
+    <!--Main Navigation-->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">tts.satxdevops.com</a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intro">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#best-features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#examples">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                    <!-- Social Icon  -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Collapsible content -->
+            </div>
+        </nav>
+        <!--/.Navbar-->
+        <!--Mask-->
+        <div id="intro" class="view">
+            <div class="mask rgba-black-strong">
+                <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+                    <div class="row d-flex justify-content-center text-center">
+                        <div class="col-md-10">
+                            <!-- Heading -->
+                            <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Tech Talent South San Antonio DevOps Blog</h2>
+                            <!-- Divider -->
+                            <hr class="hr-light">
+                            <!-- Description -->
+                            <h4 class="white-text my-4">You'll need lots of coffee.</h4>
+                            <button type="button" class="btn btn-outline-white">Read more<i class="fa fa-book ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Mask-->
+    </header>
+    <!--Main Navigation-->
+    <!--Main layout-->
+    <main class="mt-5">
+        <div class="container">
+            <!--Section: Best Features-->
+            <section id="best-features" class="text-center">
+                <!-- Heading -->
+                <h2 class="mb-5 font-weight-bold">DevOps</h2>
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center mb-4">
+                    <!--Grid column-->
+                    <div class="col-md-8">
+                        <!-- Description -->
+                        <p class="grey-text"><a href="https://www.techtalentsouth.com/">Tech Talent South</a> is a tech boot camp working out of <a href="https://venturexsa.spaces.nexudus.com/en">VentureX</a> coworking space in San Antonio. We have classes in <a href="https://www.techtalentsouth.com/courses/devops-and-continuous-integration/">DevOps</a>, Ruby on Rails, and <a href="https://www.techtalentsouth.com/courses/javascript-application-development/">JavaScript</a>. If you want to learn to code in Saytown, this is the place!</p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-5">
+                        <i class="fa fa-camera-retro fa-4x orange-text"></i>
+                        <h4 class="my-4 font-weight-bold">UI/UX</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-1">
+                        <i class="fa fa-heart fa-4x orange-text"></i>
+                        <h4 class="my-4 font-weight-bold">Front End</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-4 mb-1">
+                        <i class="fa fa-bicycle fa-4x orange-text"></i>
+                        <h4 class="my-4 font-weight-bold">Back End</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!--Section: Best Features-->
+            <hr class="my-5">
+            <!--Section: Examples-->
+            <section id="examples" class="text-center">
+                <!-- Heading -->
+                <h2 class="mb-5 font-weight-bold">Our Cohort</h2>
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <h4 class="my-4 font-weight-bold">Ryan Wahid</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <h4 class="my-4 font-weight-bold">Avery Smith</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/29.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <h4 class="my-4 font-weight-bold">Joshua Davidson</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/10.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <h4 class="my-4 font-weight-bold">Leslie Henley</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/11.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <h4 class="my-4 font-weight-bold">Jacob Cavazos</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/13.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+                        <h4 class="my-4 font-weight-bold">Javier Ruedas</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!--Section: Examples-->
+            <hr class="my-5">
+            <!--Section: Gallery-->
+            <section id="gallery">
+                <!-- Heading -->
+                <h2 class="mb-5 font-weight-bold text-center">The DevOps Blog</h2>
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner z-depth-1-half" role="listbox">
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/images/84.jpg" alt="First slide">
+                                </div>
+                                <!--/First slide-->
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/images/85.jpg" alt="Second slide">
+                                </div>
+                                <!--/Second slide-->
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg" alt="Third slide">
+                                </div>
+                                <!--/Third slide-->
+                            </div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                            <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <!--/.Controls-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <!--Excerpt-->
+                        <a href="" class="teal-text">
+                            <h6 class="pb-1">
+                                <i class="fa fa-heart"></i>
+                                <strong> Blog </strong>
+                            </h6>
+                        </a>
+                        <h4 class="mb-3">
+                            <strong>This is title of the news</strong>
+                        </h4>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis debitis aut rerum.</p>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis debitis aut rerum.</p>
+                        <p>by
+                            <a>
+                                <strong>Jessica Clark</strong>
+                            </a>, 26/08/2016</p>
+                        <a class="btn btn-primary btn-md">Read more</a>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!--Section: Gallery-->
+            <hr class="my-5">
+            <!--Section: Contact-->
+            <section id="contact">
+                <!-- Heading -->
+                <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-md-12">
+                        <!-- Form contact -->
+                        <form class="p-5">
+                            <div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
+                                <input type="text" id="form3" class="form-control form-control-sm">
+                                <label for="form3">Your name</label>
+                            </div>
+                            <div class="md-form form-sm"> <i class="fa fa-envelope prefix grey-text"></i>
+                                <input type="text" id="form2" class="form-control form-control-sm">
+                                <label for="form2">Your email</label>
+                            </div>
+                            <div class="md-form form-sm"> <i class="fa fa-tag prefix grey-text"></i>
+                                <input type="text" id="form32" class="form-control form-control-sm">
+                                <label for="form34">Subject</label>
+                            </div>
+                            <div class="md-form form-sm"> <i class="fa fa-pencil prefix grey-text"></i>
+                                <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                                <label for="form8">Your message</label>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+                            </div>
+                        </form>
+                        <!-- Form contact -->
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-7 col-md-12">
+                        <!--Grid row-->
+                        <div class="row text-center">
+                            <!--Grid column-->
+                            <div class="col-lg-4 col-md-12 mb-3">
+                                <p>
+                                    <i class="fa fa-map fa-1x mr-2 grey-text"></i>New York, NY 10012</p>
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <p>
+                                    <i class="fa fa-building fa-1x mr-2 grey-text"></i>Mon - Fri, 8:00-22:00</p>
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <p>
+                                    <i class="fa fa-phone fa-1x mr-2 grey-text"></i>+ 01 234 567 89</p>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                        <!--Google map-->
+                        <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!--Section: Contact-->
+        </div>
+    </main>
+    <!--Main layout-->
+    <!--Footer-->
+    <footer class="page-footer font-small unique-color-dark pt-0">
+        <!-- Social buttons -->
+        <div class="primary-color">
+            <div class="container">
+                <!--Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <!--Facebook-->
+                        <a class="fb-ic ml-0">
+                            <i class="fa fa-facebook white-text mr-4"> </i>
+                        </a>
+                        <!--Twitter-->
+                        <a class="tw-ic">
+                            <i class="fa fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!--Google +-->
+                        <a class="gplus-ic">
+                            <i class="fa fa-google-plus white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin-->
+                        <a class="li-ic">
+                            <i class="fa fa-linkedin white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fa fa-instagram white-text mr-lg-4"> </i>
+                        </a>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+        </div>
+        <!-- Social buttons -->
+        <!--Footer Links-->
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+                <!--First column-->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>Company name</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <!--/.First column-->
+                <!--Second column-->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>Products</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">MDBootstrap</a>
+                    </p>
+                    <p>
+                        <a href="#!">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+                    <p>
+                        <a href="#!">Bootstrap Angular</a>
+                    </p>
+                </div>
+                <!--/.Second column-->
+                <!--Third column-->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>Useful links</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Shipping Rates</a>
+                    </p>
+                    <p>
+                        <a href="#!">Help</a>
+                    </p>
+                </div>
+                <!--/.Third column-->
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>Contact</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+                <!--/.Fourth column-->
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <!--Copyright-->
+        <div class="footer-copyright py-3 text-center">
+            © 2018 Copyright: TTS SATX DevOps Class</a>
+        </div>
+        <!--/.Copyright-->
+    </footer>
+    <!--/.Footer-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!--Google Maps-->
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <!-- Google Maps settings -->
+    <script>
+    // Regular map
+    function regular_map() {
+        var var_location = new google.maps.LatLng(29.424122, -98.493629);
+
+        var var_mapoptions = {
+            center: var_location,
+            zoom: 11
+        };
+
+        var var_map = new google.maps.Map(document.getElementById("map-container"),
+            var_mapoptions);
+
+        var var_marker = new google.maps.Marker({
+            position: var_location,
+            map: var_map,
+            title: "San Antonio"
+        });
+    }
+
+    // Initialize maps
+    google.maps.event.addDomListener(window, 'load', regular_map);
+    </script>
+    <!-- Carousel options -->
+    <script>
+    $('.carousel').carousel({
+        interval: 2600,
+    })
+    </script>
 </body>
 
 </html>
