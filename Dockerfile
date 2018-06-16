@@ -1,21 +1,18 @@
 FROM ruby:2.4.1-slim
 
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev postgresql-client
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev postgresql-client libsqlite3-dev nodejs
 
 ENV RAILS_ROOT /var/www/class-project
 
-RUN mkdir -p $RAILS_ROOT/tmp/pids
+EXPOSE 3000
 
 WORKDIR $RAILS_ROOT
 
-COPY Gemfile Gemfile
-
-COPY Gemfile.lock Gemfile.lock
+COPY . .
 
 RUN gem install bundler
 
 RUN bundle install
 
-COPY . .
+CMD ["rails", "s"]
 
-CMD ["config/containers/app_cmd.sh"]
