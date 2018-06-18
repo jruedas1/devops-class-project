@@ -12,6 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2018_06_15_223739) do
 
+  create_table "students", force: :cascade do |t|
+    t.string "title"
+    t.string "location"
+    t.string "skills"
+    t.string "summary"
+    t.string "github"
+    t.string "linkedin"
+    t.string "school"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
