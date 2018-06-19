@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_06_19_205911) do
 
-ActiveRecord::Schema.define(version: 2018_06_19_205324) do
   create_table "recruiters", force: :cascade do |t|
     t.string "skills"
     t.string "photo"
