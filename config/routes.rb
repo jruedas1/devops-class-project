@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  get 'student/new'
+  get 'student/edit'
   devise_for :users
-  root 'welcome#index'
-  get 'welcome/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post 'students' => 'student#create_student'
+  get 'index' => 'student#index'
 end
