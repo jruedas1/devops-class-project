@@ -11,7 +11,7 @@
   <%= form.label :linkedin %><br>
   <%= form.text_field :linkedin, class: "form-control" %><br>
   <%= form.label :bio %><br>
-  <%= form.text_area :name, class: "form-control" %><br>
+  <%= form.text_area :bio, class: "form-control" %><br>
 	<%= form.hidden_field :user_id, value: current_user.id %>
 	<%= submit_tag "Submit Profile" %><br>
 <% end %>

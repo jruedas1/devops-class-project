@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'recruiter/new'
+  get 'new_recruiter' => 'recruiter#new'
   get 'recruiter/edit'
   get 'recruiters' => 'recruiter#index'
   devise_for :users
