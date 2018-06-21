@@ -1,0 +1,19 @@
+<h1>Recruiters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recruiters.each do |recruiter| %>
+      <tr>
+        <td><%= recruiter.name %></td>
+        <td><%= recruiter.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

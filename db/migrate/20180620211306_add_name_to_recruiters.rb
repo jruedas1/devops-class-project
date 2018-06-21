@@ -1,0 +1,5 @@
+class AddNameToRecruiters < ActiveRecord::Migration[5.2]
+  def change
+    add_column :recruiters, :name, :string
+  end
+end
