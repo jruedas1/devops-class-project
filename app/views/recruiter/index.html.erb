@@ -1,18 +1,22 @@
 <h1>Recruiters</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Email</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Skills Sought</th>
     </tr>
   </thead>
 
   <tbody>
     <% @recruiters.each do |recruiter| %>
       <tr>
-        <td><%= recruiter.name %></td>
-        <td><%= recruiter.email %></td>
+        <td><%= link_to recruiter.name, show_recruiter_path(id: recruiter.id) %></td>
+        <td><%= recruiter.company %></td>
+        <td><%= recruiter.location %></td>
+        <td><%= recruiter.skills %></td>
       </tr>
     <% end %>
   </tbody>

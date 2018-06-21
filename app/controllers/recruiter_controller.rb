@@ -10,6 +10,10 @@ class RecruiterController < ApplicationController
   	@recruiters = Recruiter.all
   end
 
+  def show
+    @recruiter = Recruiter.find(params[:id])
+  end
+
   def create
   	@recruiter = Recruiter.create(recruiter_params)
     redirect_to recruiters_path
@@ -20,6 +24,5 @@ class RecruiterController < ApplicationController
   def recruiter_params
      params.require(:recruiter).permit(:name, :email, :company, :website, :linkedin, :bio, :user_id)
   end
-
 
 end
