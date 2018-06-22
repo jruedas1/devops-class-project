@@ -2,13 +2,13 @@
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
-Devise.setup do |config|
+  Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
-  # by default. You can change it below and use your own secret key.
-  # config.secret_key = '7cbee808db08a0caca228823b7a49d74d8e27a13378d3defce76bc1133b571aa2b8a062429dda64017d66115c82f909ea6535991695151c686282098d7d6260e'
+  # by default. You can change it below and use your own secret key.  
+  config.secret_key = 'd4ca22ac07e0dba89b8a53dc99cb82c045f3ffc8bf22e51b5f0becdc8f30cae68f92b662d6787bc9ed749da739317d8a8f84833b5538e877efac3f82e3286ec0'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -18,8 +18,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-  config.secret_key = '2e0dd9f85fd1d793225c121c8e324521e23c046b1769127a0e592f6b24a15145051fbc5d6e31fa1ee58675fd04ce6c3607dcfc75bb5f73f74683b24afab68a00'
+  #config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

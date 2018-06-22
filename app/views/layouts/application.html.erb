@@ -10,23 +10,27 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-primary" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <span class="navbar-text">
-            <h3> Tech Talent South DevOps</h3>
-          </span>
-        </div>
-        <div class="container-fluid">
-          <div class="class=" align-self-center="align-self-center" mr-3""="mr-3" "">
-            <div class="pull-right">
-              <a class="btn btn-danger btn-lg" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
-              <%= link_to "Recruiter", new_recruiter_path, class: "btn btn-info btn-lg" %>
-            </div>
-          </div>
-        </div>
-     </nav>
-      <%= yield %>
-    </div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Tech Talent South DevOps</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <button class="btn btn-lg btn-danger" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</button>
+          <%= link_to "Recruiter", new_recruiter_path, class: "btn btn-lg btn-info" %>
+        </form>
+      </div>
+    </nav>
+
+    <%= yield %>
+
   </body>
 </html>
