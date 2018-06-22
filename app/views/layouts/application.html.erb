@@ -7,7 +7,6 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
 
   <body>
@@ -22,6 +21,7 @@
         <div class="class=" align-self-center="align-self-center" mr-3""="mr-3""">
           <div class="pull-right">
             <a class="btn btn-danger btn-lg" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
+            <%= link_to "Recruiter", new_recruiter_path, class: "btn btn-info" %>
           </div>
         </div>
       </div>
