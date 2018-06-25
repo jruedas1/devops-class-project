@@ -24,7 +24,8 @@
           </li>
         </ul>
         <form class="form-inline">
-          <button class="btn btn-lg btn-danger" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</button>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-danger" %>
+          <!--<button class="btn btn-lg btn-danger" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</button>-->
           <%= link_to "Recruiter", new_recruiter_path, class: "btn btn-lg btn-info" %>
         </form>
       </div>
