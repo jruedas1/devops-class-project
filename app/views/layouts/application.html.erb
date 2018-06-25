@@ -19,20 +19,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span></a>
+            <%= link_to "Home", root_path %>
           </li>
         </ul>
         <form class="form-inline">
-          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-danger", id:"logout" %>
           <!--<button class="btn btn-lg btn-danger" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</button>-->
           <%= link_to "Recruiters", recruiters_path, class: "btn btn-lg btn-info" %>
-
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-danger", id:"logout" %>
         </form>
       </div>
     </nav>
-
-    <%= yield %>
-
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
