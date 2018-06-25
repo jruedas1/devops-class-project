@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'show_recruiter' => 'recruiter#show'
   
   devise_for :users
-  
+
   root 'welcome#index'
   get 'welcome/index'
   
