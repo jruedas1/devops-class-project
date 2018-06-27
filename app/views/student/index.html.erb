@@ -1,4 +1,2 @@
 <h1>Student#index</h1>
-<% @students.each do | student | %>
-<%= student.title + " , " + student.location + " , " + student.skills + " , " + student.summary + " , " + student.github + " , " + student.linkedin + " , " + student.school + " , " + student.photo %> 
-<% end %>
+<%= link_to "Sign up as a Student", new_recruiter_path, class: "btn btn-lg btn-info" %>
