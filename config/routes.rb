@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'student/new'
+  get 'new_student' => 'student#new'
   get 'student/edit'
   post 'students' => 'student#create_student'
   get 'index' => 'student#index'
