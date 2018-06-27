@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'student/new'
-  get 'student/edit'
+  get  'index' => 'student#index'
   post 'students' => 'student#create_student'
-  get 'index' => 'student#index'
+  get 'new_student' => 'student#new'
+  get 'student/edit'
+  
+  get 'show_student' =>'student#show'
+  
   
 
   get 'recruiters' => 'recruiter#index'
