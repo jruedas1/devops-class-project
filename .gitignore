@@ -32,6 +32,3 @@
 #ignore any osx .ds files
 .DS_Store
 */.DS_Store
-
-# don't share the gitignore file itself
-.gitignore
