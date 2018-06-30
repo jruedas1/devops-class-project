@@ -4,6 +4,7 @@ class RecruitersController < ApplicationController
   end
 
   def edit
+     @recruiter = Recruiter.find(params[:id])
   end
 
   def show
@@ -17,6 +18,11 @@ class RecruitersController < ApplicationController
   def create
     @recruiter = Recruiter.create(recruiter_params)
     redirect_to root_path
+  end
+
+  def update
+    #@recruiter.update(recruiter_params)
+    #redirect_to recruiter_path(params[:id])
   end
 
   private
