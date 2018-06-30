@@ -13,7 +13,7 @@
   <tbody>
     <% @recruiters.each do |recruiter| %>
       <tr>
-        <td><%= link_to recruiter.name %></td>
+        <td><%= link_to recruiter.name, recruiter_path(:id) %></td>
         <td><%= recruiter.company %></td>
         <td><%= recruiter.location %></td>
         <td><%= recruiter.skills %></td>
