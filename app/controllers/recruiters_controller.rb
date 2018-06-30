@@ -17,7 +17,7 @@ class RecruitersController < ApplicationController
 
   def create
     @recruiter = Recruiter.create(recruiter_params)
-    redirect_to root_path
+    redirect_to recruiters_path
   end
 
   def update
