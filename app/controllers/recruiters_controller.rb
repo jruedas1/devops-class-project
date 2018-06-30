@@ -21,8 +21,9 @@ class RecruitersController < ApplicationController
   end
 
   def update
-    #@recruiter.update(recruiter_params)
-    #redirect_to recruiter_path(params[:id])
+    @recruiter = Recruiter.find(params[:id])
+    @recruiter.update(recruiter_params)
+    redirect_to recruiter_path(params[:id])
   end
 
   private
