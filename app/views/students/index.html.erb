@@ -1,0 +1,33 @@
+<h1>Students</h1>
+<%= link_to "Sign up as a Student", new_student_path(@student), class: "btn btn-lg btn-info" %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Skills</th>
+      <th>Summary</th>
+      <th>Github</th>
+      <th>Linked In</th>
+      <th>School</th>
+      <th>Location</th>
+      <th>Photo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= link_to student.title, student_path(id: student.id) %></td>
+        <td><%= student.location %></td>
+        <td><%= student.skills %></td>
+        <td><%= student.summary %></td>
+        <td><%= student.github %></td>
+        <td><%= student.linkedin %></td>
+        <td><%= student.school %></td>
+        <td><%= student.jobtypes %></td>
+        <td><%= student.photo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
