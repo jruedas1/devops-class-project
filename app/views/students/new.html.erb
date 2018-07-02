@@ -10,6 +10,7 @@
 		<%= f.text_field :school, placeholder: "coding school" %><br />
 		<%= f.text_field :jobtypes, placeholder: "jobtypes" %><br />
 		<%= f.text_field :photo, placeholder: "photo" %><br />
+		<%= f.hidden_field :user_id, value: current_user.id %>
 		<%= f.submit "Create Student Profile" %>
 	<% end %>
 </div>
