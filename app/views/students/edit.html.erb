@@ -1,2 +1,25 @@
-<h1>Students#edit</h1>
-<p>Find me in app/views/students/edit.html.erb</p>
+<p>Editing <%= @student.title %>
+<%= form_for @student, url: { action: "update" } do |form| %>
+	<%= form.label :title %><br>
+	<%= form.text_field :title, class: "form-control" %><br>
+	<%= form.label :location %><br>
+	<%= form.text_field :location, class: "form-control" %><br>
+  <%= form.label :skills %>
+  <%= form.text_field :skills, class: "form-control" %>
+  <%= form.label :summary %><br>
+  <%= form.text_field :summary, class: "form-control" %><br>
+  <%= form.label :github %><br>
+  <%= form.text_field :github, class: "form-control" %><br>
+  <%= form.label :linkedin %><br>
+  <%= form.text_field :linkedin, class: "form-control" %><br>
+  <%= form.label :school %><br>
+  <%= form.text_area :school, class: "form-control" %><br>
+  <%= form.label :jobtypes %><br>
+  <%= form.text_area :jobtypes, class: "form-control" %><br>
+  <%= form.label :photo %><br>
+  <%= form.text_area :photo, class: "form-control" %><br>
+	<%= form.hidden_field :user_id, value: current_user.id %>
+	<%= form.hidden_field :id, value: @student.id %>
+	<%= submit_tag "Submit Profile" %><br>
+<% end %>
+
