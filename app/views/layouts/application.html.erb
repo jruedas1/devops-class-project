@@ -5,7 +5,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"-->
     <!-- Material Design Bootstrap -->
     <!--<link href="css/mdb.min.css" rel="stylesheet">-->
     <%= csrf_meta_tags %>
@@ -31,7 +31,7 @@
         <form class="form-inline">
           <!--<button class="btn btn-lg btn-danger" rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</button>-->
           <%= link_to "Recruiters", recruiters_path, class: "btn btn-lg btn-info" %>
-          <%= link_to "Students", index_path, class: "btn btn-lg btn-info" %>
+          <%= link_to "Students", students_path, class: "btn btn-lg btn-info" %>
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-lg btn-danger", id:"logout" %>
         </form>
       </div>

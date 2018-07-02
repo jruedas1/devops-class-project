@@ -1,0 +1,15 @@
+<div style="margin:50px;">
+	<h3>Create a new student profile</h3>
+	<%= form_for @student do |f|%>
+		<%= f.text_field :title, placeholder: "professional title" %><br />
+		<%= f.text_field :location, placeholder: "location" %><br />
+		<%= f.text_field :skills, placeholder: "skills" %><br />
+		<%= f.text_area :summary, placeholder: "summary of expertise" %><br />
+		<%= f.text_field :github, placeholder: "github" %><br />
+		<%= f.text_field :linkedin, placeholder: "linkedin" %><br />
+		<%= f.text_field :school, placeholder: "coding school" %><br />
+		<%= f.text_field :jobtypes, placeholder: "jobtypes" %><br />
+		<%= f.text_field :photo, placeholder: "photo" %><br />
+		<%= f.submit "Create Student Profile" %>
+	<% end %>
+</div>
