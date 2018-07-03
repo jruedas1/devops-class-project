@@ -26,6 +26,11 @@ class RecruitersController < ApplicationController
     redirect_to recruiter_path(params[:id])
   end
 
+  def destroy
+    Recruiter.destroy(params[:id])
+    redirect_to recruiters_path
+  end
+
   private
 
   def recruiter_params
