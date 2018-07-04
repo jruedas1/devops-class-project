@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_20_211550) do
+ActiveRecord::Schema.define(version: 2018_07_04_215654) do
 
   create_table "recruiters", force: :cascade do |t|
-    t.string "skills"
     t.string "photo"
     t.string "location"
     t.string "linkedin"
     t.string "website"
-    t.string "jobtypes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
