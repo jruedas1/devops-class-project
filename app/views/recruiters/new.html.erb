@@ -3,7 +3,6 @@
 	<%= form_for @recruiter do |form| %>
 		<fieldset class="form-group form-row">
 			<legend>Basic Info</legend>
-			<div class="row">
 				<div class="col">
 				<%= form.label :name %><br>
 				<%= form.text_field :name, class: "form-control" %><br>
@@ -12,11 +11,9 @@
 				<%= form.label :email %><br>
 				<%= form.email_field :email, class: "form-control" %><br>
 			  </div>
-		  </div>
 	  </fieldset>
-	  <fieldset class="form-group">
+	  <fieldset class="form-group form-row">
 	  	<legend>Company Info</legend>
-	  	<div class="row">
 		  	<div class="col">
 				  <%= form.label :company %><br>
 				  <%= form.text_field :company, class: "form-control" %><br>
@@ -25,11 +22,9 @@
 			    <%= form.label :website %><br>
 			    <%= form.text_field :website, class: "form-control" %><br>
 			  </div>
-			</div>
 	  </fieldset>
-	  <fieldset class="form-group">
+	  <fieldset class="form-group form-row">
 	  	<legend>Personal Info</legend>
-	  	<div class="row">
 				<div class="col">
 				  <%= form.label :linkedin %><br>
 				  <%= form.text_field :linkedin, class: "form-control" %><br>
@@ -38,7 +33,6 @@
 				  <%= form.label :bio %><br>
 				  <%= form.text_area :bio, class: "form-control" %><br>
 			  </div>
-		  </div>
 		</fieldset>
 		 	<%= form.hidden_field :user_id, value: current_user.id %>
 		  <%= submit_tag "Submit Profile", class: "btn btn-success" %><br>
