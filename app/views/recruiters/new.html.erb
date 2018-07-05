@@ -3,13 +3,15 @@
 	<%= form_for @recruiter do |form| %>
 		<fieldset class="form-group form-row">
 			<legend>Basic Info</legend>
-			<div class="col">
-			<%= form.label :name %><br>
-			<%= form.text_field :name, class: "form-control" %><br>
-		  </div>
-		  <div class="col">
-			<%= form.label :email %><br>
-			<%= form.email_field :email, class: "form-control" %><br>
+			<div class="row">
+				<div class="col">
+				<%= form.label :name %><br>
+				<%= form.text_field :name, class: "form-control" %><br>
+			  </div>
+			  <div class="col">
+				<%= form.label :email %><br>
+				<%= form.email_field :email, class: "form-control" %><br>
+			  </div>
 		  </div>
 	  </fieldset>
 	  <fieldset class="form-group">
